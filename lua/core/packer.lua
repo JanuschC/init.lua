@@ -14,10 +14,10 @@ return require('packer').startup(function(use)
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
+	  'bluz71/vim-nightfly-colors',
+	  as = 'nightfly',
 	  config = function()
-		  vim.cmd('colorscheme rose-pine')
+		  vim.cmd('colorscheme nightfly')
 	  end
   })
 
@@ -46,9 +46,9 @@ return require('packer').startup(function(use)
 	  branch = 'v1.x',
 	  requires = {
 		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
+          {'neovim/nvim-lspconfig'},
 
 		  -- Autocompletion
 		  {'hrsh7th/nvim-cmp'},
