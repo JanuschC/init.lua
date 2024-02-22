@@ -1,6 +1,6 @@
 local pid = vim.fn.getpid()
 
-local omnisharp_bin = "/usr/local/bin/omnisharp-roslyn/OmniSharp"
+local omnisharp_bin = "/home/janusch/.cache/omnisharp-vim/omnisharp-roslyn/OmniSharp"
 
 require'lspconfig'.omnisharp.setup{
     cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) },

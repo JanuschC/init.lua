@@ -6,3 +6,27 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = {
+      ".git",
+      ".vs",
+      "node_modules",
+      "dist",
+      "build",
+      "target",
+      "vendor",
+      "Pods",
+      "Carthage",
+      "deps",
+      "out",
+      "generated",
+      "generated-sources",
+      "generated-test-sources",
+      "bin",
+      "obj",
+      "tmp",
+    }
+  }
+}
+
